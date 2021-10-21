@@ -6,9 +6,9 @@ services:
     tty: true
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/Dockerfile
     volumes:
-      - ./start.sh:/root/start.sh
+      - ./docker/start.sh:/root/start.sh
       # - ./scripts:/notebooks/workspace/src/scripts
     environment:
       - ROS_MASTER_URI=http://localhost:11311
