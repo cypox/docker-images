@@ -1,10 +1,6 @@
 # use latest-py3 in case of CPU only
 FROM tensorflow/tensorflow:latest-gpu-py3
 
-# Ausy Credentials
-ARG USERNAME=user
-ARG PASSWORD=1234
-
 # install packages
 RUN apt update && apt install -q -y \
     build-essential \
@@ -63,7 +59,7 @@ RUN pip3 install pyyaml rospkg gym opencv-python defusedxml
 
 # Disable certificate check
 RUN git config --global http.sslverify false
-RUN git clone https://${USERNAME}:${PASSWORD}@gitlab.ausy.com/ausy/rd/robotic/robin_vision.git
+RUN git clone https://KsjGQ6xVCP5jx5-2GURB@gitlab.ausy.com/ausy/rd/robotic/robin_vision.git
 
 RUN echo "source /opt/ros/melodic/setup.bash" >> /root/.bashrc
 # tensorflow's default working dir
