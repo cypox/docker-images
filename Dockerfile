@@ -43,7 +43,7 @@ RUN rosdep init \
 
 # install ros packages
 ENV ROS_DISTRO kinetic
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
     ros-melodic-ros-base=1.4.1-0* ros-melodic-cv-bridge \
     && rm -rf /var/lib/apt/lists/*
 
@@ -59,8 +59,9 @@ RUN pip3 install pyyaml rospkg gym opencv-python defusedxml
 
 # Disable certificate check
 RUN git config --global http.sslverify false
-RUN git clone https://KsjGQ6xVCP5jx5-2GURB@gitlab.ausy.com/ausy/rd/robotic/robin_vision.git
+RUN git clone https://maneggaz:KsjGQ6xVCP5jx5-2GURB@gitlab.ausy.com/ausy/rd/robotic/robin_vision.git
 
 RUN echo "source /opt/ros/melodic/setup.bash" >> /root/.bashrc
 # tensorflow's default working dir
 WORKDIR /root/robin_vision
+
