@@ -4,13 +4,15 @@
 
 You simply run:
 
-```docker-compose up --build -d
+```bash
+docker-compose up --build -d
 ```
 
 ## Running
 
 You simply run:
 
-```docker run -it docker_ros_tf_ros
+```bash
+docker run -it docker_ros_tf_ros
 ```
 
