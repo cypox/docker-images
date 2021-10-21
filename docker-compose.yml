@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      # - ./entrypoint.sh:/root/entrypoint.sh
+      - ./start.sh:/root/start.sh
       # - ./scripts:/notebooks/workspace/src/scripts
     environment:
       - ROS_MASTER_URI=http://localhost:11311
