@@ -42,7 +42,7 @@ RUN rosdep init \
     && rosdep update
 
 # install ros packages
-ENV ROS_DISTRO kinetic
+ENV ROS_DISTRO melodic
 RUN apt-get update && apt-get install -y \
     ros-melodic-ros-base=1.4.1-0* ros-melodic-cv-bridge \
     && rm -rf /var/lib/apt/lists/*

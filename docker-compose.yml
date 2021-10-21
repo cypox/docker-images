@@ -12,8 +12,8 @@ services:
       # - ./scripts:/notebooks/workspace/src/scripts
     environment:
       - ROS_MASTER_URI=http://localhost:11311
-      - ROS_ROOT=/opt/ros/kinetic/share/ros
-      - ROS_PACKAGE_PATH=/opt/ros/kinetic/share
+      - ROS_ROOT=/opt/ros/melodic/share/ros
+      - ROS_PACKAGE_PATH=/opt/ros/melodic/share
       - HOST_USER=$USER
       - HOST_UID=$UID
     #entrypoint: ["/root/entrypoint.sh"]
