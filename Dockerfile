@@ -63,5 +63,5 @@ RUN git clone https://maneggaz:KsjGQ6xVCP5jx5-2GURB@gitlab.ausy.com/ausy/rd/robo
 
 RUN echo "source /opt/ros/melodic/setup.bash" >> /root/.bashrc
 # tensorflow's default working dir
-WORKDIR /root/robin_vision
+WORKDIR /robin_vision
 

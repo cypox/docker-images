@@ -2,6 +2,7 @@ version: '2.3'
 
 services:
   ros:
+    container_name: ros-py3
     tty: true
     build:
       context: .
